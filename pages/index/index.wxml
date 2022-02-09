@@ -1,0 +1,13 @@
+<view class="container">
+  <movable-area class="item_box" style="width: {{boxWeight}}rpx;height: {{boxHeight}}rpx">
+    <movable-view class="item {{selectId === item.id?'item_show':'item_hide'}}" wx:for="{{healthItem}}" x="{{item.x}}rpx" y="{{item.y}}rpx" direction="all" bindchange="touchMove" bindtouchend="touchend" data-index="{{item.index}}" data-id="{{item.id}}" bindtouchstart="unlockItem">
+      <view class="item_name">{{item.name}}</view>
+    </movable-view>
+  </movable-area>
+
+  <view class="item_box layer_box" style="width: {{boxWeight}}rpx;height: {{boxHeight}}rpx">
+    <view class="item layer_item {{selectId == item.id?'item_hide':''}}" wx:for="{{layerItem}}" style="left: {{item.x}}rpx;top: {{item.y}}rpx">
+      <view class="item_name">{{item.name}}</view>
+    </view>
+  </view>
+</view>

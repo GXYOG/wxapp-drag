@@ -1,0 +1,39 @@
+.container{
+  position: relative;
+}
+.item_box{
+  z-index: 9;
+}
+.item{
+  width: 200rpx;
+  height: 320rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 20rpx rgba(208, 213, 221, 0.5);
+  border-radius: 10px;
+  margin-bottom: 32rpx;
+}
+.item_name{
+  width: auto;
+  margin: 32rpx 32rpx 0;
+  font-size: 44rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  color: #333333;
+}
+
+.layer_box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.layer_item{
+  position: absolute;
+  transition: left 1s,top 1s;
+}
+.item_show{
+  opacity: 1;
+}
+.item_hide{
+  opacity: 0;
+}
